@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@800&family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html{
+    font-family: 'Roboto', sans-serif;
+  }
+}
