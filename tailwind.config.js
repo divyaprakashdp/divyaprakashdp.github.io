@@ -7,6 +7,9 @@ export default {
         logo: ["Merienda"],
         heading: ["Exo"],
       },
+      backgroundImage: {
+        hero: "url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg')",
+      },
     },
   },
   plugins: [],

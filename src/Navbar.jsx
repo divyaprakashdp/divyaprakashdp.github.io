@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 export default function Navbar() {
   const [navBtn, setNavBtn] = useState(false);
   const navLinks = [
-    { id: 1, link: "About" },
+    { id: 1, link: "Home" },
     { id: 2, link: "Skills" },
     { id: 3, link: "Projects" },
     { id: 4, link: "Experience" },
@@ -14,14 +14,14 @@ export default function Navbar() {
   const navList = navLinks.map(({ id, link }) => (
     <li
       key={id}
-      className="p-4 cursor-pointer uppercase font-medium text-xl text-gray-500 hover:scale-110 duration-200"
+      className="p-4 cursor-pointer uppercase font-medium text-xl text-slate-400 hover:scale-110 duration-200"
     >
       {link}
     </li>
   ));
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-slate-400 bg-black fixed">
       <h2 className=" font-logo text-5xl ml-4">dp</h2>
 
       <ul className="hidden md:flex">{navList}</ul>
