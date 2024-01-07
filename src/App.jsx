@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import Skills from "./Skills";
 import SocialLinks from "./SocialLinks";
-// import Projects from "./Projects";
+import Projects from "./Projects";
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
       <Home />
       <SocialLinks />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
     </>
   );
 }
