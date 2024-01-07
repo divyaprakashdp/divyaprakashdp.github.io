@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Navbar() {
   const [navBtn, setNavBtn] = useState(false);
+
+  function handleClickInMobile() {
+    if (window.innerWidth < 720) {
+      setNavBtn(false);
+    }
+  }
   const navLinks = [
     { id: 1, link: "Home" },
     { id: 2, link: "Skills" },
@@ -14,9 +21,11 @@ export default function Navbar() {
   const navList = navLinks.map(({ id, link }) => (
     <li
       key={id}
-      className="p-4 cursor-pointer uppercase font-medium text-xl text-slate-400 hover:scale-110 duration-200"
+      className="p-4 cursor-pointer uppercase font-medium text-xl text-slate-400 hover:scale-110  hover:underline duration-500 decoration-lime-200"
     >
-      {link}
+      <Link to={link} smooth duration={600} onClick={handleClickInMobile}>
+        {link}
+      </Link>
     </li>
   ));
 
@@ -32,7 +41,10 @@ export default function Navbar() {
         {navBtn ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {navBtn && (
-        <ul className="flex flex-col justify-center items-center absolute top-12 right-0 w-18 h-18 bg-gradient-to-b from-black to-gray-800">
+        <ul
+          className="flex flex-col justify-center items-center absolute top-12 right-0 w-18 rounded-bl-lg bg-gradient-to-b from-black to-gray-800"
+          onClick={() => setNavBtn(!navBtn)}
+        >
           {navList}
         </ul>
       )}
