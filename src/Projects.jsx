@@ -3,7 +3,7 @@ import polarixImg from "./assets/Polarix.png";
 import timemachine from "./assets/timemachine.png";
 
 export default function Projects() {
-  const techStack = [
+  const projectDetails = [
     {
       id: 1,
       icon: <br size={80} className="text-red-500" />,
@@ -38,38 +38,40 @@ export default function Projects() {
     },
   ];
 
-  const techStackDiv = techStack.map(({ id, title, style, link, imgSrc }) => (
-    <div
-      key={id}
-      className={`py-2 shadow-md text-center justify-center hover:scale-110 duration-500 rounded-xl hover:rounded-lg ${style}`}
-    >
-      <div>
-        <p className="mt-2">{title}</p>
-      </div>
+  const projectDetailsDiv = projectDetails.map(
+    ({ id, title, style, link, imgSrc }) => (
+      <div
+        key={id}
+        className={`py-2 shadow-md text-center justify-center hover:scale-110 duration-500 rounded-xl hover:rounded-lg ${style}`}
+      >
+        <div>
+          <p className="mt-2">{title}</p>
+        </div>
 
-      <div className="w-100 mx-4 my-4 ">
-        <img src={imgSrc} className="rounded:lg" />
+        <div className="w-100 mx-4 my-4 ">
+          <img src={imgSrc} className="rounded:lg" />
+        </div>
+        <div className="text-sm">
+          <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="mr-4 hover:text-blue-500"
+          >
+            CODE
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-blue-500"
+          >
+            Demo
+          </a>
+        </div>
       </div>
-      <div className="text-sm">
-        <a
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          className="mr-4 hover:text-blue-500"
-        >
-          CODE
-        </a>
-        <a
-          href=""
-          target="_blank"
-          rel="noreferrer"
-          className="hover:text-blue-500"
-        >
-          Demo
-        </a>
-      </div>
-    </div>
-  ));
+    )
+  );
   return (
     <div
       id="Projects"
@@ -83,7 +85,7 @@ export default function Projects() {
           <p className="py-6">Here are few of my side projects</p>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 py-8 px-12">
-          {techStackDiv}
+          {projectDetailsDiv}
         </div>
       </div>
     </div>
