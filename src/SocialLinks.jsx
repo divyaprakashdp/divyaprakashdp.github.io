@@ -48,16 +48,12 @@ export default function SocialLinks() {
     },
   ];
   return (
-    <div className="hidden lg:flex flex-col top-[35%] left-0 fixed rounded-br-md ">
+    <div className="flex md:flex-col top-[35%] md:left-0 absolute md:fixed rounded-br-md ">
       <ul>
         {links.map(({ id, link, icon, style }) => (
           <li
             key={id}
-            className={
-              "flex justify-between items-center w-40 h-14 px-4 bg-gray-500 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300" +
-              " " +
-              style
-            }
+            className={`flex justify-between items-center w-40 h-14 px-4 bg-lime-700 ml-[-100px] md:hover:ml-[-10px] hover:rounded-md duration-300 ${style}`}
           >
             <a
               href={link}

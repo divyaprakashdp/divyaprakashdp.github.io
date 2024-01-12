@@ -33,7 +33,7 @@ export default function Expirience() {
   const expDiv = companies.map(({ id, icon, period, details, style }) => (
     <div
       key={id}
-      className={`lg:flex lg:flex-start py-2 shadow-md text-center justify-center hover:scale-110 duration-500 rounded-xl hover:rounded-lg ${style}`}
+      className={`lg:flex lg:flex-start py-2 shadow-md text-center justify-center md:hover:scale-110 duration-500 rounded-xl hover:rounded-lg ${style}`}
     >
       <div className="md:w-1/4 mx-4 ">{icon}</div>
       <div className="md:w-2/3 mx-12 ">
