@@ -7,7 +7,7 @@ export default function Expirience() {
     {
       id: 1,
       icon: <img size={200} src={deloitteLogo} className="h-48 w-96" />,
-      period: "2020-present",
+      period: "2020-Present",
       details:
         "Enhancing one of the largest retail client's authentication page with scalable ReactJS solutions. Built innovative tools, and frameworks, achieving 25% user engagement increase and 30% manual intervention reduction.",
       style: "shadow-[#86BC24]",
@@ -47,7 +47,7 @@ export default function Expirience() {
   return (
     <div
       id="Experience"
-      className="md:h-screen w-full text-xl uppercase bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white "
+      className="w-full text-xl bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white "
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>

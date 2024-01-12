@@ -4,6 +4,7 @@ import Skills from "./Skills";
 import SocialLinks from "./SocialLinks";
 import Projects from "./Projects";
 import Expirience from "./Experience";
+import Contact from "./Contact";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Skills />
       <Projects />
       <Expirience />
+      <Contact />
     </>
   );
 }

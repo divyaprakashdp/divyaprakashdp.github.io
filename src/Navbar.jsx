@@ -21,7 +21,7 @@ export default function Navbar() {
   const navList = navLinks.map(({ id, link }) => (
     <li
       key={id}
-      className="p-4 cursor-pointer uppercase font-medium text-xl text-slate-400 hover:scale-110  hover:underline duration-500 decoration-lime-200"
+      className="p-4 cursor-pointer uppercase font-medium text-xl text-[#32A1E9] hover:scale-110  hover:underline duration-500 decoration-lime-200"
     >
       <Link to={link} smooth duration={600} onClick={handleClickInMobile}>
         {link}
@@ -30,7 +30,7 @@ export default function Navbar() {
   ));
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-slate-400 bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-[#32A1E9] bg-black fixed">
       <h2 className=" font-logo text-5xl ml-4">dp</h2>
 
       <ul className="hidden md:flex">{navList}</ul>
