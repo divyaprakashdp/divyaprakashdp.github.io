@@ -5,6 +5,8 @@ import SocialLinks from "./SocialLinks";
 import Projects from "./Projects";
 import Expirience from "./Experience";
 import Contact from "./Contact";
+import Resume from "./Resume";
+import ResumeForm from "./ResumeForm";
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
       <Projects />
       <Expirience />
       <Contact />
+      {/* <ResumeForm /> */}
+
     </>
   );
 }
