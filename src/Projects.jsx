@@ -1,23 +1,26 @@
 import expenseTrackerImg from "./assets/expenseTracker.png";
 import polarixImg from "./assets/Polarix.png";
 import timemachine from "./assets/timemachine.png";
+import bibliai from "./assets/bibliai.png"
 
 export default function Projects() {
   const projectDetails = [
     {
       id: 1,
       icon: <br size={80} className="text-red-500" />,
-      title: "BOOKQUEST",
+      title: "BIBLIAI",
       style: "shadow-red-900",
-      link: "https://github.com/divyaprakashdp/bookquest",
-      imgSrc: expenseTrackerImg,
+      repoLink: "https://github.com/divyaprakashdp/divyaprakashdp.github.io",
+      link: "https://bibliai.netlify.app/",
+      imgSrc: bibliai,
     },
     {
       id: 2,
       icon: <br size={80} className="text-blue-500" />,
       title: "TIME-MACHINE",
       style: "shadow-[#AAC9AF]",
-      link: "https://github.com/divyaprakashdp/time-machine",
+      repoLink: "https://github.com/divyaprakashdp/time-machine",
+      link: "",
       imgSrc: timemachine,
     },
     {
@@ -25,7 +28,8 @@ export default function Projects() {
       icon: <br size={80} className="text-yellow-500" />,
       title: "EXPENSE-TRACKER",
       style: "shadow-[#8D60FB]",
-      link: "https://github.com/divyaprakashdp/expense-tracker-app",
+      repoLink: "https://github.com/divyaprakashdp/expense-tracker-app",
+      link: "",
       imgSrc: expenseTrackerImg,
     },
     {
@@ -33,13 +37,14 @@ export default function Projects() {
       icon: <br size={80} className="text-blue-500" />,
       title: "POLARIX",
       style: "shadow-[#C8434A]",
+      repoLink: "",
       link: "",
       imgSrc: polarixImg,
     },
   ];
 
   const projectDetailsDiv = projectDetails.map(
-    ({ id, title, style, link, imgSrc }) => (
+    ({ id, title, style, repoLink, link, imgSrc }) => (
       <div
         key={id}
         className={`py-2 shadow-md text-center justify-center hover:scale-110 duration-500 rounded-xl hover:rounded-lg ${style}`}
@@ -53,15 +58,15 @@ export default function Projects() {
         </div>
         <div className="text-sm">
           <a
-            href={link}
+            href={repoLink}
             target="_blank"
             rel="noreferrer"
-            className="mr-4 hover:text-blue-500"
+            className="mr-4 hover:text-blue-500 cursor-pointer"
           >
             CODE
           </a>
           <a
-            href=""
+            href={link}
             target="_blank"
             rel="noreferrer"
             className="hover:text-blue-500"

@@ -1,6 +1,28 @@
-import SocialLinks from "./SocialLinks";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_9adoq0n', 'template_pcoknxh', form.current, {
+        publicKey: 'UxJpw1VaaHHqd2nls',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+
+    e.target.reset()
+  };
+
   return (
     <div
       id="Contact"
@@ -16,26 +38,28 @@ export default function Contact() {
           </p>
         </div>
         <div
-          className={`lg:flex lg:flex-start py-2 w-full h-[360px] shadow-md text-center justify-center md:hover:scale-110 duration-500 rounded-xl hover:rounded-lg shadow-[#0FE2BB]`}
+          className={`lg:flex lg:flex-start py-2 w-full h-[360px] shadow-md text-center justify-center duration-500 rounded-xl hover:rounded-lg shadow-[#0FE2BB]`}
         >
-          <form
+          <form ref={form} onSubmit={sendEmail}
             action=""
             className="flex flex-col gap-4 items-center w-[100%] text-black rounded-lg "
           >
             <input
               type="text"
               placeholder="Your Name"
-              className="w-[40%] rounded-lg h-8 hover:scale-110 duration-200"
+              name="user_name"
+              className="w-[40%] rounded-lg h-8 bg-slate-300 hover:scale-110 duration-200 p-2 "
             />
             <input
               type="text"
               placeholder="Email"
-              className="w-[40%] rounded-lg h-8 hover:scale-110 duration-200"
+              name="user_email"
+              className="w-[40%] rounded-lg h-8 bg-slate-300 hover:scale-110 duration-200 p-2"
             />
             <textarea
               name="message"
               placeholder="Type your message here..."
-              className="w-[40%] min-h-8 h-[50%] rounded-lg hover:scale-110 duration-200"
+              className="w-[40%] min-h-8 h-[50%] rounded-lg bg-slate-300 hover:scale-110 transition-all ease-in duration-200 p-2"
             ></textarea>
             <input
               type="submit"

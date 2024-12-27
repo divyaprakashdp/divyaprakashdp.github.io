@@ -1,4 +1,5 @@
 import heroImage from "./assets/dp.jpg";
+import ScrollToTop from "./ScrollToTop";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           </p>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 }

@@ -21,9 +21,9 @@ export default function Navbar() {
   const navList = navLinks.map(({ id, link }) => (
     <li
       key={id}
-      className="p-4 cursor-pointer uppercase font-medium text-xl text-[#32A1E9] hover:scale-110  hover:underline duration-500 decoration-lime-200"
+
     >
-      <Link to={link} smooth duration={600} onClick={handleClickInMobile}>
+      <Link to={link} smooth duration={600} onClick={handleClickInMobile} className="p-2 mr-12 cursor-pointer uppercase font-medium text-xl text-[#32A1E9] hover:border hover:text-white border-lime-200 rounded-2xl">
         {link}
       </Link>
     </li>
