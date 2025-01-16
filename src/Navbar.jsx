@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Navbar() {
   const [navBtn, setNavBtn] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   function handleClickInMobile() {
     if (window.innerWidth < 720) {
@@ -29,8 +30,22 @@ export default function Navbar() {
     </li>
   ));
 
+  useEffect(() => {
+    const toggleVisibility = () => {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      setIsVisible(scrolled > scrollHeight * 0.25);
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
+
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-[#32A1E9] bg-black fixed">
+    <div className={`flex justify-between items-center w-full h-20 px-4 text-[#32A1E9] ${isVisible ? "bg-black" : "bg-transparent"} fixed z-50`}>
       <h2 className=" font-logo text-5xl ml-4">dp</h2>
 
       <ul className="hidden md:flex">{navList}</ul>

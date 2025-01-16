@@ -9,6 +9,7 @@ export default function Projects() {
       id: 1,
       icon: <br size={80} className="text-red-500" />,
       title: "BIBLIAI",
+      desc: "An AI powered book search, recommendation and analysis application.",
       style: "shadow-red-900",
       repoLink: "https://github.com/divyaprakashdp/divyaprakashdp.github.io",
       link: "https://bibliai.netlify.app/",
@@ -18,6 +19,7 @@ export default function Projects() {
       id: 2,
       icon: <br size={80} className="text-blue-500" />,
       title: "TIME-MACHINE",
+      desc: "",
       style: "shadow-[#AAC9AF]",
       repoLink: "https://github.com/divyaprakashdp/time-machine",
       link: "",
@@ -27,6 +29,7 @@ export default function Projects() {
       id: 3,
       icon: <br size={80} className="text-yellow-500" />,
       title: "EXPENSE-TRACKER",
+      desc: "",
       style: "shadow-[#8D60FB]",
       repoLink: "https://github.com/divyaprakashdp/expense-tracker-app",
       link: "",
@@ -36,6 +39,7 @@ export default function Projects() {
       id: 4,
       icon: <br size={80} className="text-blue-500" />,
       title: "POLARIX",
+      desc: "",
       style: "shadow-[#C8434A]",
       repoLink: "",
       link: "",
@@ -44,13 +48,16 @@ export default function Projects() {
   ];
 
   const projectDetailsDiv = projectDetails.map(
-    ({ id, title, style, repoLink, link, imgSrc }) => (
+    ({ id, title, desc, style, repoLink, link, imgSrc }) => (
       <div
         key={id}
         className={`py-2 shadow-md text-center justify-center hover:scale-110 duration-500 rounded-xl hover:rounded-lg ${style}`}
       >
         <div>
           <p className="mt-2">{title}</p>
+        </div>
+        <div>
+          <p className="mt-2 font-thin text-sm">{desc}</p>
         </div>
 
         <div className="w-100 mx-4 my-4 ">
