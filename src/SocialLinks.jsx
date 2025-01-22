@@ -48,7 +48,7 @@ export default function SocialLinks() {
     },
   ];
   return (
-    <div className="flex md:flex-col top-[35%] md:left-0 absolute md:fixed rounded-br-md ">
+    <div className="md:flex md:flex-col top-[65%] md:top-[35%] md:left-0 absolute md:fixed rounded-br-md">
       <ul>
         {links.map(({ id, link, icon, style }) => (
           <li

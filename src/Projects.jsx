@@ -6,6 +6,16 @@ import bibliai from "./assets/bibliai.png"
 export default function Projects() {
   const projectDetails = [
     {
+      id: 0,
+      icon: <br size={80} className="text-blue-500" />,
+      title: "POLARIX",
+      desc: "A web clone of POSTMAN tool with AI capability to validate APIs without code",
+      style: "shadow-[#C8434A]",
+      repoLink: "https://github.com/divyaprakashdp/Polarix",
+      link: "https://polarixx.netlify.app/",
+      imgSrc: polarixImg,
+    },
+    {
       id: 1,
       icon: <br size={80} className="text-red-500" />,
       title: "BIBLIAI",
@@ -35,16 +45,7 @@ export default function Projects() {
       link: "",
       imgSrc: expenseTrackerImg,
     },
-    {
-      id: 4,
-      icon: <br size={80} className="text-blue-500" />,
-      title: "POLARIX",
-      desc: "",
-      style: "shadow-[#C8434A]",
-      repoLink: "",
-      link: "",
-      imgSrc: polarixImg,
-    },
+
   ];
 
   const projectDetailsDiv = projectDetails.map(
@@ -60,8 +61,8 @@ export default function Projects() {
           <p className="mt-2 font-thin text-sm">{desc}</p>
         </div>
 
-        <div className="w-100 mx-4 my-4 ">
-          <img src={imgSrc} className="rounded:lg" />
+        <div className="w-[90%] mx-4 my-4 ">
+          <img src={imgSrc} className="rounded:lg object-contain" />
         </div>
         <div className="text-sm">
           <a
@@ -78,7 +79,7 @@ export default function Projects() {
             rel="noreferrer"
             className="hover:text-blue-500"
           >
-            Demo
+            LIVE
           </a>
         </div>
       </div>
@@ -87,14 +88,14 @@ export default function Projects() {
   return (
     <div
       id="Projects"
-      className="w-full text-xl uppercase bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white"
+      className="pt-16 w-full text-xl uppercase bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
           <p className="text-4xl font-bold border-b-4 border-lime-200 p-2 inline">
             Projects
           </p>
-          <p className="py-6">Here are few of my side projects</p>
+          <p className="py-6">Here you will find some of my personal projects</p>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 py-8 px-12">
           {projectDetailsDiv}

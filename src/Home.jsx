@@ -44,7 +44,7 @@ export default function Home() {
           <h3 className="font-heading font-bold text-2xl md:text-4xl uppercase text-lime-600">
             a web developer
           </h3>
-          <p className="text-gray-500 text-2xl py-4">
+          <p className="text-gray-400 text-2xl py-4">
             Based in Bengaluru. Passionate about creating digital solutions that
             empower people and businesses.
           </p>

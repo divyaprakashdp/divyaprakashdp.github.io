@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <div
       id="Contact"
-      className="md:h-screen w-full  bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white"
+      className="pt-16 md:h-screen w-full  bg-gradient-to-b from-gray-800 via-black to-gray-800 text-white text-xl"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white py-4">
         <div>
@@ -45,26 +45,29 @@ export default function Contact() {
             className="flex flex-col gap-4 items-center w-[100%] text-black rounded-lg "
           >
             <input
+              required
               type="text"
               placeholder="Your Name"
               name="user_name"
-              className="w-[40%] rounded-lg h-8 bg-slate-300 hover:scale-110 duration-200 p-2 "
+              className="w-[90%] md:w-[60%] rounded-lg h-8 bg-slate-300 md:hover:scale-110 duration-200 p-2 "
             />
             <input
+              required
               type="text"
               placeholder="Email"
               name="user_email"
-              className="w-[40%] rounded-lg h-8 bg-slate-300 hover:scale-110 duration-200 p-2"
+              className="w-[90%] md:w-[60%] rounded-lg h-8 bg-slate-300 md:hover:scale-110 duration-200 p-2"
             />
             <textarea
+              required
               name="message"
               placeholder="Type your message here..."
-              className="w-[40%] min-h-8 h-[50%] rounded-lg bg-slate-300 hover:scale-110 transition-all ease-in duration-200 p-2"
+              className="w-[90%] md:w-[60%] min-h-8 md:h-[50%] rounded-lg bg-slate-300 md:hover:scale-110 transition-all ease-in duration-200 p-2"
             ></textarea>
             <input
               type="submit"
               value="Submit"
-              className="bg-lime-300 text-slate-700 w-[30%] px-8 py-2 mb-2 rounded-lg hover:scale-110 hover:bg-lime-600 duration-200 "
+              className="bg-lime-300 text-slate-700 w-[90%] md:w-[50%] px-8 py-2 mb-2 rounded-lg md:hover:scale-110 hover:bg-lime-600 duration-200 "
             />
           </form>
         </div>

@@ -24,7 +24,7 @@ export default function Navbar() {
       key={id}
 
     >
-      <Link to={link} smooth duration={600} onClick={handleClickInMobile} className="p-2 mr-12 cursor-pointer uppercase font-medium text-xl text-[#32A1E9] hover:border hover:text-white border-lime-200 rounded-2xl">
+      <Link to={link} smooth duration={600} onClick={handleClickInMobile} className="p-2 mr-12 cursor-pointer uppercase font-bold text-xl text-[#32A1E9] hover:text-white rounded-2xl transition-all gap-4">
         {link}
       </Link>
     </li>
@@ -56,8 +56,9 @@ export default function Navbar() {
         {navBtn ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {navBtn && (
+
         <ul
-          className="flex flex-col justify-center items-center absolute top-12 right-0 w-18 rounded-bl-lg bg-gradient-to-b from-black to-gray-800"
+          className="flex flex-col w-full top-0 right-0 p-4 gap-4 justify-center items-center absolute rounded-b-lg bg-gradient-to-b from-black to-gray-800"
           onClick={() => setNavBtn(!navBtn)}
         >
           {navList}
