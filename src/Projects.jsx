@@ -12,7 +12,7 @@ export default function Projects() {
       desc: "A web clone of POSTMAN tool with AI capability to validate APIs without code",
       style: "shadow-[#C8434A]",
       repoLink: "https://github.com/divyaprakashdp/Polarix",
-      link: "https://polarixx.netlify.app/",
+      link: "https://polarix.dpfolio.tech/",
       imgSrc: polarixImg,
     },
     {
@@ -22,7 +22,7 @@ export default function Projects() {
       desc: "An AI powered book search, recommendation and analysis application.",
       style: "shadow-red-900",
       repoLink: "https://github.com/divyaprakashdp/divyaprakashdp.github.io",
-      link: "https://bibliai.netlify.app/",
+      link: "https://bibliai.dpfolio.tech/",
       imgSrc: bibliai,
     },
     {
